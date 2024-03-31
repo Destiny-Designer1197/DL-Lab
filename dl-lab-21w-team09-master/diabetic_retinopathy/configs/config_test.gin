@@ -1,0 +1,19 @@
+# Training
+Trainer.total_steps = 200
+Trainer.log_interval = 10
+Trainer.ckpt_interval = 10
+
+Trainer.n_classes = 2
+
+# Input pipeline
+load.name = 'idrid'
+load.image_train_dir = 'diabetic_retinopathy/dataset/1. Original Images/a. Training Set/'
+load.image_test_dir =  'diabetic_retinopathy/dataset/1. Original Images/b. Testing Set/'
+load.label_train_dir = 'diabetic_retinopathy/dataset/2. Groundtruths/a. IDRiD_Disease Grading_Training Labels.csv'
+load.label_test_dir = 'diabetic_retinopathy/dataset/2. Groundtruths/b. IDRiD_Disease Grading_Testing Labels.csv'
+load.batch_size = 32
+load.shuffle_size = 256
+load.caching = True
+
+make_dataset.target_width = 256
+make_dataset.target_height = 256

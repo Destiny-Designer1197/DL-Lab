@@ -1,0 +1,12 @@
+# Training
+Trainer.total_steps = 3000
+Trainer.log_interval = 1e2
+Trainer.ckpt_interval = 1e2
+Trainer.n_classes = 12
+
+# Input pipeline
+load.name = 'hapt'
+load.balanced = False
+prepare.batch_size = 64
+prepare.shuffle_size = 100
+prepare.caching = True
